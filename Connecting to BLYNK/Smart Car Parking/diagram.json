@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "author": "SANTHOSH S",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 9.6, "left": 62.44, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -94.5, "left": 207.1, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic2",
+      "top": 145.5,
+      "left": 303.1,
+      "attrs": { "distance": "203" }
+    },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic3", "top": 145.5, "left": -205.7, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic4", "top": -75.3, "left": -205.7, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "ultrasonic1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "ultrasonic1:VCC", "esp:3V3", "red", [ "v0", "h-220.8" ] ],
+    [ "esp:18", "ultrasonic1:TRIG", "green", [ "h0" ] ],
+    [ "ultrasonic1:ECHO", "esp:2", "green", [ "v0" ] ],
+    [ "ultrasonic2:GND", "esp:GND.2", "black", [ "v19.2", "h114", "v-192" ] ],
+    [ "ultrasonic2:VCC", "esp:3V3", "red", [ "v9.6", "h-345.6", "v-211.2" ] ],
+    [ "esp:5", "ultrasonic2:TRIG", "green", [ "h124.8", "v134.4", "h96" ] ],
+    [ "esp:4", "ultrasonic2:ECHO", "green", [ "h105.6", "v105.6", "h0", "v9.6", "h134.4" ] ],
+    [
+      "ultrasonic4:VCC",
+      "esp:3V3",
+      "red",
+      [ "v9.6", "h-28.8", "v0", "h-57.6", "v-115.2", "h-48" ]
+    ],
+    [ "ultrasonic3:VCC", "esp:3V3", "red", [ "v0", "h-96", "v-326.4", "h297.6" ] ],
+    [ "ultrasonic3:GND", "esp:GND.2", "black", [ "v0", "h85.2", "v-259.2", "h182.4", "v57.6" ] ],
+    [ "ultrasonic4:GND", "esp:GND.2", "black", [ "h181.2", "v-19.2", "h86.4" ] ],
+    [ "ultrasonic4:ECHO", "esp:13", "green", [ "v57.6", "h152.8", "v96", "h28.8" ] ],
+    [ "ultrasonic4:TRIG", "esp:14", "green", [ "v86.4", "h172.4", "v48" ] ],
+    [ "ultrasonic3:ECHO", "esp:17", "green", [ "v28.8", "h335.2" ] ],
+    [ "ultrasonic3:TRIG", "esp:16", "green", [ "v57.6", "h287.6" ] ]
+  ],
+  "dependencies": {}
+}
