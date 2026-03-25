@@ -8,9 +8,9 @@
 
 
 //Replace this field with Your auth token
-#define BLYNK_TEMPLATE_ID "TMPL3Fa6eQf9e"
+#define BLYNK_TEMPLATE_ID "Enter Your Template ID"
 #define BLYNK_TEMPLATE_NAME "Smart parking"
-#define BLYNK_AUTH_TOKEN "C5yd-C-cAOwEMMiqohaSeoJRModhyTzl"
+#define BLYNK_AUTH_TOKEN "Enter your TOKEN"
 
 #define BLYNK_PRINT Serial
 #include <WiFi.h>
