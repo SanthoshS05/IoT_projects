@@ -6,9 +6,9 @@
 //https://github.com/santh0sh05/IoT_projects.git
 
 //replace with your Blynk credentials
-#define BLYNK_TEMPLATE_ID "TMPL3-VBCPY"
+#define BLYNK_TEMPLATE_ID "ENter Your ID"
 #define BLYNK_TEMPLATE_NAME "water fountain"
-#define BLYNK_AUTH_TOKEN "88q5QUnUB7tqWGrbsLJgcfrIsAqleTnF"
+#define BLYNK_AUTH_TOKEN "Enter your TOKEN"
 
 #define BLYNK_PRINT Serial
 #include <WiFi.h>
